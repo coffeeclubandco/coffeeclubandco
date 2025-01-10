@@ -1,0 +1,53 @@
+.locations {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .locations h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .location-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .location-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #6f4e37;
+  }
+  
+  .location-card p {
+    margin: 5px 0;
+  }
+  
+  .location-card a {
+    color: #6f4e37;
+    text-decoration: none;
+  }
+  
+  /* .location-card a:hover {
+    text-decoration: underline;
+  } */
+  
+  .map-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .map-link:hover {
+    /* background-color: #563c2b; */
+  }
