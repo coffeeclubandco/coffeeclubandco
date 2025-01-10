@@ -16,7 +16,7 @@ const FeedbackForm = () => {
       'service_id', // Replace with EmailJS Service ID
       'template_id', // Replace with EmailJS Template ID
       formData,
-      'user_id' // Replace with EmailJS User ID 
+      'user_id' // Replace with EmailJS User ID.
     ).then(
       () => setStatus('Message sent successfully!'),
       () => setStatus('Failed to send message.')
