@@ -19,7 +19,7 @@ const FeedbackForm = () => {
       'user_id' // Replace with EmailJS User ID.
     ).then(
       () => setStatus('Message sent successfully!'),
-      () => setStatus('Failed to send message.')
+      () => setStatus('Failed to send message .')
     );
   };
 
