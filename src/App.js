@@ -56,8 +56,8 @@ const App = () => {
       <main>
         <Locations/>
         <MenuVideo />
-        <Menu />
-        <FeedbackForm />
+        {/* <Menu />
+        <FeedbackForm /> */}
       </main>
     </div>
   );
