@@ -33,7 +33,19 @@
   }
   
   @media (max-width: 768px) {
+    .menu-video-container {
+      height: 50vh; /* Adjust container height for mobile */
+    }
+  
     .menu-video {
       position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .video-overlay {
+      top: 30%; /* Adjust overlay positioning */
+      font-size: 1.2rem;
     }
   }
