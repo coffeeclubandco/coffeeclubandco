@@ -51,13 +51,20 @@ const App = () => {
           <h1>For</h1>
           <h1>Friends</h1>
         </div>
-        <img className="headerImage" src={header} alt="Coffee Club Logo" />
+          <img
+            className="headerImage"
+            src={header}
+            alt="Coffee Club Logo"
+            draggable="false"
+            onContextMenu={(e) => e.preventDefault()}
+            onCopy={(e) => e.preventDefault()}
+          />
       </header>
       <main>
         <Locations/>
         <MenuVideo />
-        {/* <Menu />
-        <FeedbackForm /> */}
+        <Menu />
+        <FeedbackForm />
       </main>
     </div>
   );

@@ -20,9 +20,23 @@ const MenuVideo = () => {
       }
     };
 
+    const video = videoRef.current;
+
+    // Disable right-click context menu on the video
+    const disableContextMenu = (e) => {
+      e.preventDefault();
+    };
+
+    if (video) {
+      video.addEventListener('contextmenu', disableContextMenu);
+    }
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {
+      if (video) {
+        video.removeEventListener('contextmenu', disableContextMenu);
+      }
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -35,7 +49,11 @@ const MenuVideo = () => {
         src={menuVideo}
         type="video/mp4"
         muted
-      ></video>
+        controlsList="nodownload noplaybackrate"
+        draggable="false"
+        playsInline
+        
+      />
       <div className="video-overlay">
         <h2>Explore Our Menu</h2>
         <p>Experience the finest coffee and treats as you scroll.</p>

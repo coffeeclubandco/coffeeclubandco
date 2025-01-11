@@ -1,51 +1,67 @@
 /* MenuVideo.css */
+html, body {
+  height: 100%; /* Ensure full height for % to work */
+  margin: 0;
+  padding: 0;
+}
+
 .menu-video-container {
-    position: relative;
-    height: 80vh;
-    overflow: hidden;
+  position: relative;
+  height: 600px; 
+  overflow: hidden;
+}
+
+.menu-video {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.video-overlay h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.video-overlay p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-video-container {
+    height: 400px; 
   }
-  
+
   .menu-video {
     width: 100%;
-    height: 72%;
+    height: 70%;
     object-fit: cover;
-    /* z-index: -1; */
   }
-  
+
   .video-overlay {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    top: 30%;
+    font-size: 1.2rem;
   }
-  
+
   .video-overlay h2 {
-    font-size: 3rem;
-    margin: 0;
-  }
-  
-  .video-overlay p {
     font-size: 1.5rem;
-    margin-top: 10px;
+
   }
-  
-  @media (max-width: 768px) {
-    .menu-video-container {
-      height: 50vh; /* Adjust container height for mobile */
-    }
-  
-    .menu-video {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
-    .video-overlay {
-      top: 30%; /* Adjust overlay positioning */
-      font-size: 1.2rem;
-    }
+
+  .video-overlay p {
+    font-size: 0.8rem;
   }
+}
