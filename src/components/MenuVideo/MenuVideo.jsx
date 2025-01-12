@@ -52,6 +52,7 @@ const MenuVideo = () => {
         controlsList="nodownload noplaybackrate"
         draggable="false"
         playsInline
+        // autoPlay
         
       />
       <div className="video-overlay">
