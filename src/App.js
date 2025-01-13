@@ -3,7 +3,7 @@ import './styles.css'
 import Locations from './components/Locations/Locations'
 import MenuVideo from './components/MenuVideo/MenuVideo'
 import Menu from './components/Menu/Menu'
-import FeedbackForm from './components/FeedbackForm'
+import FeedbackForm from './components/FeedbackForm/FeedbackForm'
 import header from './assets/header.png'
 import logo from './assets/logo.png'
 
