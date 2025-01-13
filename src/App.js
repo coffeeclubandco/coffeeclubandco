@@ -37,13 +37,14 @@ const App = () => {
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           {isMenuOpen && <button className="close-btn" onClick={closeMenu}>&times;</button>}
 
-            <li><a href="#Home">Home</a></li>
             <li><a onClick={() => scrollToSection('beverages')} href="#Beverages">Beverages</a></li>
+            <li><a onClick={() => scrollToSection('food')} href="#Food">Food</a></li>
             <li className="nav-logo">
               <img src={logo} alt="Logo" className="logo" />
             </li>
-            <li><a onClick={() => scrollToSection('food')} href="#Food">Food</a></li>
             <li><a href="#Company">Company</a></li>
+            <li><a onClick={() => scrollToSection('feedback')} href="#Feedback">Feedback</a></li>
+
           </ul>
         </nav> 
         <div className="header-text">

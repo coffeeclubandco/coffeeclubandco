@@ -22,44 +22,47 @@ const FeedbackForm = () => {
     ).then(
       () => {
         setStatus('Message sent successfully!');
-        setIsSubmitted(true); // Collapse form on success
+        setIsSubmitted(true);
       },
       () => setStatus('Failed to send message.')
     );
   };
 
   return (
-    <div className={`feedback-container ${isSubmitted ? 'collapsed' : ''}`}>
-      {!isSubmitted ? (
-        <form onSubmit={handleSubmit} className="feedback-form">
-          <h2>Send Feedback</h2>
-          <input
-            type="text"
-            name="from_name"
-            placeholder="Your Name"
-            value={formData.from_name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <button type="submit">Send</button>
-          {status && <p>{status}</p>}
-        </form>
-      ) : (
+    <div className="feedback-container" data-qa="feedback">
+      <form
+        onSubmit={handleSubmit}
+        className={`feedback-form ${isSubmitted ? 'collapsed' : ''}`}
+      >
+        <h2>Send Feedback</h2>
+        <input
+          type="text"
+          name="from_name"
+          placeholder="Your Name"
+          value={formData.from_name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Send</button>
+        {status && <p>{status}</p>}
+      </form>
+
+      {isSubmitted && (
         <div className="thank-you-message">
           <h2>Thank You!</h2>
           <p>Your feedback has been submitted successfully.</p>
