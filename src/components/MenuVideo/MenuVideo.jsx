@@ -1,7 +1,7 @@
 // components/MenuVideo.js
 import React, { useEffect, useRef } from 'react';
 import './MenuVideo.css';
-import menuVideo from '../../assets/croissant1.mp4';
+import menuVideo from '../../assets/CrossiantTrimmed.mp4';
 
 const MenuVideo = () => {
   const videoRef = useRef(null);
